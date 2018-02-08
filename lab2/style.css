@@ -1,6 +1,7 @@
 body {
   margin: auto;
   width: 80%;
+  background-color: powderblue;
 }
 
 header, section, article, nav, aside, footer, div {
@@ -8,4 +9,12 @@ header, section, article, nav, aside, footer, div {
   border: 1px dotted #000;
   padding: 10px;
   margin: 10px;
+}
+
+h1 {
+  color: blue;
+}
+
+p {
+  color: green;
 }
