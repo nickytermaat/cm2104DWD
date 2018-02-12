@@ -13,7 +13,7 @@
   // Split into seperate name and name=value
   // Print to the browser console
   for (var i = 0; i < nvPairs.length; i++) {
-    var nvPair = nvPairs[1].split("=");
+    var nvPair = nvPairs[i].split("=");
     var name = nvPairs[0];
     var value = nvPair[1];
     console.log("argument name="+name+" and value="+value);
