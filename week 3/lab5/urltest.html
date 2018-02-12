@@ -12,9 +12,9 @@
   // Iterate through name=value nvPairs
   // Split into seperate name and name=value
   // Print to the browser console
-  for (var i = 0; i < nvPairs.length; i++) {
+  for (i = 0; i < nvPairs.length; i++) {
     var nvPair = nvPairs[i].split("=");
-    var name = nvPairs[0];
+    var name = nvPair[0];
     var value = nvPair[1];
     console.log("argument name="+name+" and value="+value);
   }
