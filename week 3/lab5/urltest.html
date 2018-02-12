@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <title>Test</title>
+  <script>
+  // Grab the url in the location bar
+  var searchString = document.location.search;
+  // Strip off the leading '?'
+  searchString = searchString.substring(1);
+  // Split string of arguments into name=value pairs
+  var nvPairs = searchString.split("&");
+  // Iterate through name=value nvPairs
+  // Split into seperate name and name=value
+  // Print to the browser console
+  for (var i = 0; i < nvPairs.length; i++) {
+    var nvPair = nvPairs[1].split("=");
+    var name = nvPairs[0];
+    var value = nvPair[1];
+    console.log("argument name="+name+" and value="+value);
+  }
+  </script>
+</head>
+</body>
+</html>
