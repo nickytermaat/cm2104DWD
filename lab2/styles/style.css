@@ -26,3 +26,8 @@ p {
 #PageFooter {
   background-color: green;
 }
+
+.flex-container {
+  display:-webkit-flex;
+  display: flex;
+}
