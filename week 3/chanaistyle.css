@@ -58,3 +58,9 @@ html {
   .col-3 {width: 25%;}
   .col-6 {width: 50%;}
 }
+
+/* Tablet devices */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .menu {width: 25%;}
+  .aside {width: 100%}
+}
