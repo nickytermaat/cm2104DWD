@@ -1,5 +1,5 @@
 function main () {
-	var a b;
+	var a, b;
 	var c;
 
 	a = 10;
