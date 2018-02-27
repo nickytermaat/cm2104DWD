@@ -26,11 +26,13 @@
 			// }
 
 			var searchbox = document.getElementById("searchbox");
-			console.log(document.getElementById("searchbox"));
+			console.log(searchbox));
 
-			var searchvalue = searchbox.value;
+			var searchvalue = search.searchbox.value;
+			console.log(searchvalue);
 
-			if (!searchvalue == "") {
+			if (searchvalue != "") {
+				alert("You entered: " + searchvalue);
 				return true;
 			} else {
 				alert("please type a search query");
