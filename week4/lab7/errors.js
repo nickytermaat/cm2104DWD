@@ -1,4 +1,4 @@
-function main () {
+function pain() {
 	var a, b;
 	var c;
 
