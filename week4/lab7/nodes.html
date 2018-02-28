@@ -19,6 +19,13 @@
     var text = document.createTextNode("A Jedi craves not these things");
     newPara.appendChild(text);
     document.body.appendChild(newPara);
+
+    var repPara = document.createElement("p");
+    var repText = document.createTextNode("Aggression");
+    repPara.appendChild(repText);
+    var childPara = document.getElementsByTagName("p")[0];
+    document.body.replaceChild(repPara, childPara);
+
   </script>
 </body>
 </html>
