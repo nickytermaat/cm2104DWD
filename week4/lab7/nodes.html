@@ -21,17 +21,17 @@
     // document.body.appendChild(newPara);
 
     /* Appears paragraph on position 0, moves existing p 0->1 & 1->2*/
-    // var repPara = document.createElement("p");
-    // var repText = document.createTextNode("Aggression");
-    // repPara.appendChild(repText);
-    // var childPara = document.getElementsByTagName("p")[0];
-    // document.body.replaceChild(repPara, childPara);
+    var repPara = document.createElement("p");
+    var repText = document.createTextNode("Aggression");
+    repPara.appendChild(repText);
+    var childPara = document.getElementsByTagName("p")[0];
+    document.body.replaceChild(repPara, childPara);
 
-    var element = document.createElement("p");
-    var textnode = document.createTextNode("Aggression");
-    element.appendChild(textnode);
-    var item = document.getElementsByTagName("body");
-    item.replaceChild(element, item.childNodes[0]);
+    // var element = document.createElement("p");
+    // var textnode = document.createTextNode("Aggression");
+    // element.appendChild(textnode);
+    // var item = document.getElementsByTagName("body");
+    // item.replaceChild(element, item.childNodes[0]);
 
   </script>
 </body>
