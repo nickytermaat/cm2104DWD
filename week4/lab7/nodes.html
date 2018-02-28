@@ -20,11 +20,16 @@
     newPara.appendChild(text);
     document.body.appendChild(newPara);
 
-    var repPara = document.createElement("p");
+    /* Appears paragraph on position 0, moves existing p 0->1 & 1->2*/
+    // var repPara = document.createElement("p");
+    // var repText = document.createTextNode("Aggression");
+    // repPara.appendChild(repText);
+    // var childPara = document.getElementsByTagName("p")[0];
+    // document.body.replaceChild(repPara, childPara);
+
     var repText = document.createTextNode("Aggression");
-    repPara.appendChild(repText);
-    var childPara = document.getElementsByTagName("p")[0];
-    document.body.replaceChild(repPara, childPara);
+    var item = document.getElementsByTagName("p")[0];
+    item.replaceChild(repText, item.childNodes[0]);
 
   </script>
 </body>
