@@ -27,9 +27,11 @@
     // var childPara = document.getElementsByTagName("p")[0];
     // document.body.replaceChild(repPara, childPara);
 
-    var repText = document.createTextNode("Aggression");
-    var item = document.getElementsByTagName("p")[0];
-    item.replaceChild(repText, item.childNodes[0]);
+    var element = document.createElement("p");
+    var textnode = document.createTextNode("Aggression");
+    element.appendChild(textnode);
+    var item = document.getElementsByTagName("body");
+    item.replaceChild(element, item.childNodes[0]);
 
   </script>
 </body>
