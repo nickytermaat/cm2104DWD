@@ -36,6 +36,7 @@ function searchResults(form) {
 	var searchValue = search.searchBox.value;
 
 	if (searchValue != "") {
+		alert("You entered " + searchValue);
 		var newPara	= document.createElement("p");
 		var textPara = document.createTextNode(searchValue);
 		newPara.appendChild(textPara);
