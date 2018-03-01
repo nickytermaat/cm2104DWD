@@ -16,5 +16,16 @@ function addContent () {
 	// 2. modify its html attribute by adding items_html
 
 	document.getElementById('content').innerHTML = items_html;
+}
 
+function addContentTwo() {
+	// add a list of items to the content div
+	var items = ["hewey", "dewey", "louie"];
+
+	for (var i = 0; i < items.length; i++) {
+		var newPara = document.createElement("p");
+		var textPara = document.createTextNode(items[i]);
+		newPara.appendChild(textPara);
+		document.getElementById('content').appendChild(newPara);
+	}
 }
