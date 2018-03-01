@@ -23,9 +23,10 @@ function addContentTwo() {
 	var items = ["hewey", "dewey", "louie"];
 
 	for (var i = 0; i < items.length; i++) {
-		var newPara = document.createElement("ul");
-		var textPara = document.createTextNode("<li>" + items[i] + "</li>");
-		newPara.appendChild(textPara);
-		document.getElementById('content').appendChild(newPara);
+		var newList = document.createElement("ul");
+		var newListItem = document.createElement("li");
+		var textPara = document.createTextNode(items[i]);
+		newList.appendChild(newListItem).appendChild(textPara);
+		document.getElementById('content').appendChild(newList);
 	}
 }
