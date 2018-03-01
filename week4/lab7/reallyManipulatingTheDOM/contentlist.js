@@ -24,7 +24,7 @@ function addContentTwo() {
 
 	for (var i = 0; i < items.length; i++) {
 		var newPara = document.createElement("ul");
-		var textPara = document.createTextNode(items[i]);
+		var textPara = document.createTextNode("<li>" + items[i] + "</li>");
 		newPara.appendChild(textPara);
 		document.getElementById('content').appendChild(newPara);
 	}
