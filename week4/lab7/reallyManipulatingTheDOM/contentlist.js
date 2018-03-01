@@ -23,7 +23,7 @@ function addContentTwo() {
 	var items = ["hewey", "dewey", "louie"];
 
 	for (var i = 0; i < items.length; i++) {
-		var newPara = document.createElement("p");
+		var newPara = document.createElement("ul");
 		var textPara = document.createTextNode(items[i]);
 		newPara.appendChild(textPara);
 		document.getElementById('content').appendChild(newPara);
