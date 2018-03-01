@@ -30,3 +30,20 @@ function addContentTwo() {
 		document.getElementById('content').appendChild(newList);
 	}
 }
+
+function searchResults(form) {
+	var searchBox = document.getElementById("searchBox");
+	var searchValue = search.searchBox.value;
+
+	if (searchValue != "") {
+		var newPara	= document.createElement("p");
+		var textPara = document.createTextNode(searchValue);
+		newPara.appendChild(textPara);
+		document.getElementById("content").appendChild(newPara);
+
+		return true;
+	} else {
+		alert("Enter a search query")
+		return false;
+	}
+}

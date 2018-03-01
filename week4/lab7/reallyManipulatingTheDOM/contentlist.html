@@ -13,6 +13,13 @@
 		<button type="button" id="button1" onclick="addContent()">Disney Ducks 1</button>
 		<button type="button" id="button2" onclick="addContentTwo()">Disney Ducks 2</button>
 
+		<div id="search">
+			<form name="search">
+				<input type="text" name="query" id="searchBox" size="100">
+				<input type="submit" name="submit" value="Submit" onclick="searchResults(this.form)"
+			</form>
+		</div>
+
 		<div id="content">
 			<!-- empty div to manipulate -->
 		</div>
