@@ -32,15 +32,16 @@ function addContentTwo() {
 }
 
 function searchResults(form) {
-	var searchBox = document.getElementById("searchBox");
-	var searchValue = search.searchBox.value;
+	var searchBox = document.getElementById('searchBox');
+	var searchValue = searchForm.searchBox.value;
+	console.log(searchValue);
 
 	if (searchValue != "") {
 		alert("You entered " + searchValue);
 		var newPara	= document.createElement("p");
 		var textPara = document.createTextNode(searchValue);
 		newPara.appendChild(textPara);
-		document.getElementById("content").appendChild(newPara);
+		document.getElementById('content').appendChild(newPara);
 
 		return true;
 	} else {
