@@ -37,7 +37,6 @@ function searchResults(form) {
 	console.log(searchValue);
 
 	if (searchValue != "") {
-		return true;
 		var newPara	= document.createElement("p");
 		var textPara = document.createTextNode(searchValue);
 		newPara.appendChild(textPara);
@@ -45,11 +44,10 @@ function searchResults(form) {
 
 	} else {
 		alert("Enter a search query")
-		return false;
 	}
 }
 
 function removeLastEntry(div) {
 	var div = document.getElementById('content');
-	div.removeChild(div.lastChild.parentNode);
+	div.removeChild(div.lastChild);
 }
