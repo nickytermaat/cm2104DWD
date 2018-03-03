@@ -37,15 +37,11 @@ function searchResults(form) {
 	console.log(searchValue);
 
 	if (searchValue != "") {
-		return true;
 		var newPara	= document.createElement("p");
-		var textPara = document.createTextNode(searchValue);
-		newPara.appendChild(textPara);
-		document.getElementById('content').appendChild(newPara);
-
+		var textPara = document.createTextNode(searchForm.searchBox.value);
+		document.getElementById('content').appendChild(newPara).appendChild(textPara);
 	} else {
-		alert("Enter a search query")
-		return false;
+		alert("Enter a search query");
 	}
 }
 
