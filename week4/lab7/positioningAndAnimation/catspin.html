@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title></title>
     <script>
-    var text = "";
-    text += "<p>Total width/height: " + screen.width + " * " + screen.height + "</p>";
-    text += "<p>Available width/height: " + screen.availWidth + " * " + screen.availHeight + "</p>";
-    document.body.innerHTML = text;
+    var availableScreenWidth = screen.availWidth;
+    var availableScreenHeight = screen.availHeight;
+    var totalScreenWidth = screen.width;
+    var totalScreenHeight = screen.height;
+    console.log("Available width " + availableScreenWidth + ", height " + availableScreenHeight);
+    console.log("Total width " + totalScreenWidth + ", height " + totalScreenHeight);
     </script>
 </head>
 
