@@ -15,10 +15,10 @@
 		<button type="button" id="button3" onclick="removeLastEntry()">Remove last entry</button>
 
 		<div id="search">
-			<form name="searchForm">
+			<form name="searchForm" onsubmit="return searchResults(this)">
 				<input type="text" id="searchBox" size="30">
 				<!-- <button type="submit" value="Submit" onclick="searchResults(this.form)"> -->
-				<input type="submit" value="Submit" onclick="searchResults(this.form)">
+				<input type="submit" value="Submit" >
 			</form>
 		</div>
 

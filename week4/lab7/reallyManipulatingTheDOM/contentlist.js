@@ -33,16 +33,20 @@ function addContentTwo() {
 
 function searchResults(form) {
 	var searchBox = document.getElementById('searchBox');
-	var searchValue = searchForm.searchBox.value;
+	var searchValue = form.searchBox.value;
 	console.log(searchValue);
+	console.log(form.searchBox.value);
 
 	if (searchValue != "") {
 		var newPara	= document.createElement("p");
-		var textPara = document.createTextNode(searchForm.searchBox.value);
-		document.getElementById('content').appendChild(newPara).appendChild(textPara);
+		var textPara = document.createTextNode(searchValue);
+		newPara.appendChild(textPara);
+		document.getElementById('content').appendChild(newPara);
+		return false;
 	} else {
 		alert("Enter a search query");
 	}
+	return false;
 }
 
 function removeLastEntry(div) {
