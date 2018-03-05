@@ -13,11 +13,12 @@
     </script>
 </head>
 
-<body>
+<body onload="init();">
+  <canvas id="catCanvas" width="1000" height="350"></canvas>
 
-<p style="text-align: center">
-    <img src="cat.jpg" style="position: relative">
-</p>
-<script src ="catspin.js"></script>
+  <p style="text-align: center">
+    <img id="catImage" src="cat.jpg" style="position: relative" width="0px" height="0px">
+  </p>
+  <script src ="catspin.js"></script>
 </body>
 </html>
