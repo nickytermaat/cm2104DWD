@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // all our code will go in here
-  $('#retrieve-resources').click(funcion() {
+  $('#retrieve-resources').click(function() {
     var displayResources = $('#display-resources');
     displayResources.text('Loading data from JSON source...');
 
