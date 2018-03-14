@@ -1,5 +1,5 @@
 $(function() {
-  alert("Document ready");
+  alert("Document ready SubmitToList");
 
   $('#searchform').submit(function() {
     var searchterms = $("#searchterms").val();
