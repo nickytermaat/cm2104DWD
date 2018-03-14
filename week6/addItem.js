@@ -8,5 +8,5 @@ $(function() {
 });
 
 function addItemToList(item) {
-  $('results').append("<li>" + item + "</li>");
+  $('#results').append("<li>" + item + "</li>");
 }
