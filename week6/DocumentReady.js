@@ -1,4 +1,4 @@
 $(function() {
   // Document ready
-  alert("Document ready")
+  alert("Document ready OMDB")
 });
