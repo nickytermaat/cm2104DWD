@@ -17,16 +17,22 @@ function getResultsFromOMDB(searchterms) {
 }
 
 function addResultTitels(jsondata) {
-  var htmlstring = "";
-  for (var i = 0; i < 10; i++) {
-    htmlstring += "<li>" + jsondata.Search[i].Title + "</title>";
-    //htmlstring += "<li>" + jsondata.Search[i]. + "</title>";
+  var htmlstring = "<table><thead><tr><th>Poster</th><th>Film title</th><th>Release year</th><th>Type</th><th>IMDB page</th><th>Rotten Tomatoes</th></thead><tbody>";
+  for (var i = 0; i < 5; i++) {
+    if (jsondata.Search[i].Type == "movie") {
+      htmlstring += "<tr><td>" + "<img src=" + jsondata.Search[i].Poster + "></td><td>";
+      htmlstring += jsondata.Search[i].Title + "</td><td>";
+      htmlstring += jsondata.Search[i].Year + "</td><td>";
+      htmlstring += jsondata.Search[i].Type + "</td><td>";
+      htmlstring += "<a href=\"http://www.imdb.com/title/" + jsondata.Search[i].imdbID + "\">" + jsondata.Search[i].Title + "</a>" + "</td></tr>";
+      console.log("Rotten Tomatoes " +jsondata.Search[i].Ratings[i].);
+    }
   }
-
+  htmlstring += "</tbody></table>";
   $("#results").html(htmlstring);
 }
 
 function prettyPrintJSON(jsondata) {
   var pretty = JSON.stringify(jsondata, null, 4);
-  console.console.log(pretty);
+  console.log(pretty);
 }
