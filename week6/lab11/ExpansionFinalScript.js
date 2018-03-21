@@ -9,7 +9,7 @@ $(function() {
 });
 
 function getResultsFromOMDB(searchterms) {
-  var url = "http://www.omdbapi.com/?apikey=ced0a703&s=" + searchterms;
+  var url = "http://www.omdbapi.com/?apikey=&ced0a703s=" + searchterms;
   $.getJSON(url, function(jsondata) {
     addResultTitels(jsondata);
     prettyPrintJSON(jsondata);
@@ -34,6 +34,6 @@ function addResultTitels(jsondata) {
 }
 
 function prettyPrintJSON(jsondata) {
-  var pretty = JSON.stringify(jsondata, null, 4);
+  var pretty = JSON.stringify(jsondata, null, 8);
   console.log(pretty);
 }
