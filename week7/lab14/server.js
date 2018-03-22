@@ -32,7 +32,7 @@ app.use(express.static('public'))
 
 app.get('/search', function(req, res) {
   var searchquery = req.query.q;
-  console.log(searchquery);
+  console.log("Searchquery: " + searchquery);
   var params = {q: searchquery};
   client.get('search/tweets', params, function(error, tweets, response) {
     if(!error) {
@@ -40,7 +40,7 @@ app.get('/search', function(req, res) {
       var output = "";
       for (var t = 0; t <tweets.length; t++) {
         output += "<div>";
-        output += "<h2>" + tweets[t].user.screen_name + "</h2>";
+        //output += "<h2>" + tweets[t].user.screen_name + "</h2>";
         output += "<p>" + tweets[t].text + "</p>";
         output += "</div>";
       }
