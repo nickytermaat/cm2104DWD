@@ -9,14 +9,15 @@ var client = new Twitter({
 });
 
 var params = {screen_name: 'nodejs'};
+client.get('statuses/user_timeline', params, function(error, tweets, response){
+  if (!error) {
+    //console.log(tweets);
+    res.send(tweets);
+  }
+});
+
 app.use(express.static('public'));
 app.get('/', function(req, res) {
-  client.get('statuses/user_timeline', params, function(error, tweets, response){
-    if (!error) {
-      //console.log(tweets);
-      res.send(tweets);
-    }
-  });
   res.send("Hello World! by express");
 });
 app.listen(8080);
