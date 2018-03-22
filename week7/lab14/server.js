@@ -42,7 +42,7 @@ app.get('/search', function(req, res) {
       for (var t = 0; t < 5; t++) {
         output += "<div>";
         //output += "<h2>" + tweets[t].user.screen_name + "</h2>";
-        output += "<p>" + tweets[t].text + "</p>";
+        output += "<p>" + tweets[t].statuses.text + "</p>";
         output += "</div>";
       }
       console.log("Output ready");
