@@ -30,4 +30,24 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/search', function(req, res) {
+  var searchquery = req.query.search;
+  var params = {screen_name: searchquery};
+  client.get('search/tweets', {q: 'node.js'}, function(error, tweets, response) {
+   console.log(tweets);
+});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.listen(8080);
