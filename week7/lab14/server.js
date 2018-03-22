@@ -37,6 +37,7 @@ app.get('/search', function(req, res) {
   client.get('search/tweets', params, function(error, tweets, response) {
     if(!error) {
       console.log(tweets);
+      console.log("Amount of tweets: " + tweets.length);
       var output = "";
       for (var t = 0; t <tweets.length; t++) {
         output += "<div>";
@@ -44,6 +45,7 @@ app.get('/search', function(req, res) {
         output += "<p>" + tweets[t].text + "</p>";
         output += "</div>";
       }
+      console.log(output);
       res.send(output);
     } else {
       res.send("Hello World! by express");
