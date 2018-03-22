@@ -20,7 +20,7 @@ app.get('/joke', function(req, res){
 app.get('/calc', function(req, res){
   var x = parseInt(req.query.x);
   var y = parseInt(req.query.y);
-  var op = req.query.op;a
+  var op = req.query.op;
 
   if (op == "sub") {
     res.send("X - Y = " + (x-y));
@@ -34,6 +34,13 @@ app.get('/calc', function(req, res){
     res.send("Invalid calculation");
   }
 
+});
+
+app.use(express.static('public'));
+ap.get('/getform', function(req, res) {
+  var name = req.query.name;
+  var quest = req.query.quest;
+  res.send("Hi " + name + ", I am sure you will " + quest);
 });
 
 app.listen(8080);
