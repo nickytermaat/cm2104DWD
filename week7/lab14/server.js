@@ -32,10 +32,11 @@ app.use(express.static('public'))
 
 app.get('/search', function(req, res) {
   var searchquery = req.query.q;
+  console.log(searchquery);
   var params = {q: searchquery};
-  client.get('search/tweets', {q: searchquery}, function(error, tweets, response) {
+  client.get('search/tweets', params, function(error, tweets, response) {
     if(!error) {
-      // console.log(tweets);
+      console.log(tweets);
       var output = "";
       for (var t = 0; t <tweets.length; t++) {
         output += "<div>";
@@ -49,14 +50,5 @@ app.get('/search', function(req, res) {
     }
   });
 });
-
-
-
-
-
-
-
-
-
 
 app.listen(8080);
