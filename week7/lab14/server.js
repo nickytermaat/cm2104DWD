@@ -10,12 +10,32 @@ var client = new Twitter({
 
 app.use(express.static('public'))
 
-app.get('/screen_name', function(req, res) {
-  var params = {screen_name: 'nodejs'};
-  client.get('statuses/user_timeline', params, function(error, tweets, response) {
+// app.get('/', function(req, res) {
+//   var params = {screen_name: 'nodejs'};
+//   client.get('statuses/user_timeline', params, function(error, tweets, response) {
+//     if(!error) {
+//       // console.log(tweets);
+//       // res.send(tweets);
+//       var output = "";
+//       for (var t = 0; t <tweets.length; t++) {
+//         output += "<div>";
+//         output += "<h2>" + tweets[t].user.screen_name + "</h2>";
+//         output += "<p>" + tweets[t].text + "</p>";
+//         output += "</div>";
+//       }
+//       res.send(output);
+//     } else {
+//       res.send("Hello World! by express");
+//     }
+//   });
+// });
+
+app.get('/search', function(req, res) {
+  var searchquery = req.query.q;
+  var params = {q: searchquery};
+  client.get('search/tweets', {q: searchquery}, function(error, tweets, response) {
     if(!error) {
       // console.log(tweets);
-      // res.send(tweets);
       var output = "";
       for (var t = 0; t <tweets.length; t++) {
         output += "<div>";
@@ -29,17 +49,6 @@ app.get('/screen_name', function(req, res) {
     }
   });
 });
-
-app.get('/search', function(req, res) {
-  var searchquery = req.query.search;
-  var params = {q: searchquery};
-  client.get('search/tweets', {q: searchquery}, function(error, tweets, response) {
-   console.log(tweets);
-});
-});
-
-
-
 
 
 
