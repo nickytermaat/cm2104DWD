@@ -10,7 +10,7 @@ var client = new Twitter({
 
 app.use(express.static('public'))
 
-app.get('/', function(req, res) {
+app.get('/screen_name', function(req, res) {
   var params = {screen_name: 'nodejs'};
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if(!error) {
@@ -32,8 +32,8 @@ app.get('/', function(req, res) {
 
 app.get('/search', function(req, res) {
   var searchquery = req.query.search;
-  var params = {screen_name: searchquery};
-  client.get('search/tweets', {q: 'node.js'}, function(error, tweets, response) {
+  var params = {q: searchquery};
+  client.get('search/tweets', {q: searchquery}, function(error, tweets, response) {
    console.log(tweets);
 });
 });
