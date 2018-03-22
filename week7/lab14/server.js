@@ -39,9 +39,9 @@ app.get('/search', function(req, res) {
       console.log(tweets);
       console.log("Amount of tweets: " + tweets.length);
       var output = "";
-      for (var t = 0; t <tweets.length; t++) {
+      for (var t = 0; t < 5; t++) {
         output += "<div>";
-        output += "<h2>" + tweets[t].user.screen_name + "</h2>";
+        //output += "<h2>" + tweets[t].user.screen_name + "</h2>";
         output += "<p>" + tweets[t].text + "</p>";
         output += "</div>";
       }
