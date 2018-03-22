@@ -9,7 +9,7 @@ var client = new Twitter({
 });
 
 var params = {screen_name: 'nodejs'};
-client.get('statuses/user_timeline', params, function(error, tweets, response){
+client.get('statuses/user_timeline', params, function(error, tweets, res){
   if (!error) {
     //console.log(tweets);
     res.send(tweets);
