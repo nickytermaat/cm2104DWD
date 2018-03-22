@@ -10,10 +10,11 @@ var client = new Twitter({
 
 app.use(express.static('public'));
 
-app.get('/', function(req, res) {
+app.get('/', function(req, res){
   var params = {screen_name: 'nodejs'};
-  client.get('statuses/user_timeline', params, function(error, tweets, response){
-    if (!error) {
+  client.get('statuses/user_timeline', params, function(error, tweets, response) {
+    if(!error) {
+      //res.send(JSON.stringify(tweets));
       console.log(tweets);
       res.send(tweets);
     }
