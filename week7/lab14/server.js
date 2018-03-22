@@ -8,7 +8,7 @@ var client = new Twitter({
   access_token_secret: 'sA8WK5tlitIFqRxxbQgHi8SdGF9IXDH3tBRoq4fdGW1DI'
 });
 
-app.use(express.static('public'));
+app.use(express.static('public'))
 
 app.get('/', function(req, res){
   var params = {screen_name: 'nodejs'};
@@ -17,8 +17,10 @@ app.get('/', function(req, res){
       //res.send(JSON.stringify(tweets));
       console.log(tweets);
       res.send(tweets);
+    } else {
+      res.send("Hello World! by express");
     }
   });
-  res.send("Hello World! by express");
 });
+
 app.listen(8080);
