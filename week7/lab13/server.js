@@ -20,7 +20,7 @@ app.get('/joke', function(req, res){
 app.get('/calc', function(req, res){
   var x = parseInt(req.query.x);
   var y = parseInt(req.query.y);
-  var op = req.query.op;
+  var op = req.query.op;a
 
   if (op == "sub") {
     res.send("X - Y = " + (x-y));
