@@ -17,10 +17,23 @@ app.get('/joke', function(req, res){
   res.send(randomJoke);
 });
 
-app.get('/add', function(req, res){
+app.get('/calc', function(req, res){
   var x = parseInt(req.query.x);
   var y = parseInt(req.query.y);
-  res.send("X + Y = " + (x+y));
+  var op = req.query.op;
+
+  if (op == "sub") {
+    res.send("X - Y = " + (x-y));
+  } else if (op == "add") {
+    res.send("X + Y = " + (x+y));
+  } else if (op == "mul") {
+    res.send("X * Y = " + (x*y));
+  } else if (op = "div") {
+    res.send("X / Y = " + (x/y));
+  } else {
+    res.send("Invalid calculation");
+  }
+
 });
 
 app.listen(8080);
