@@ -37,12 +37,12 @@ app.get('/search', function(req, res) {
   client.get('search/tweets', params, function(error, tweets, response) {
     if(!error) {
       console.log(tweets);
-      console.log("Amount of tweets: " + tweets.length);
+      console.log("Amount of tweets: " + tweets.statuses.length);
       var output = "";
       for (var t = 0; t < 5; t++) {
         output += "<div>";
         //output += "<h2>" + tweets[t].user.screen_name + "</h2>";
-        output += "<p>" + tweets[t].statuses.text + "</p>";
+        output += "<p>" + tweets.statuses[t].text + "</p>";
         output += "</div>";
       }
       console.log("Output ready");
